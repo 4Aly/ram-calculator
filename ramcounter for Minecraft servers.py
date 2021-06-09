@@ -3,7 +3,8 @@ jar = "vanilla"
 print("Hello! This program is supposed to calculate how much RAM would suit your needs.")
 while True:
   try:
-    version = str(input("Enter the minecraft version you prefer: 1.8 , 1.9 , 1.10 , 1.11 , 1.12 , 1.13 , 1.14 , 1.15 , 1.16 , 1.17"))
+    print("Enter the minecraft version you prefer: 1.8 , 1.9 , 1.10 , 1.11 , 1.12 , 1.13 , 1.14 , 1.15 , 1.16 , 1.17")
+    version = str(input("Answer:"))
     if version in ["1.8" , '1.9' , '1.10' , '1.11' , '1.12' , '1.13' , '1.14' , '1.15' , '1.16' , '1.17']:
         break
     else:
@@ -22,7 +23,8 @@ elif version in ["1.8" , "1.9" , "1.10" , "1.11" , "1.12"]:
       print("--------------------------------------")
       print("--------THIS IS CASE SENSITIVE--------")
       print("--------------------------------------")
-      jar = str(input("Enter the Server Jar you prefer: vanilla , spigot , paper"))
+      print("Enter the Server Jar you prefer: vanilla , spigot , paper")
+      jar = str(input("Answer:"))
       if jar in ['vanilla' , 'spigot' , 'paper']:
           break
       else:
@@ -40,7 +42,8 @@ else:
       print("--------------------------------------")
       print("--------THIS IS CASE SENSITIVE--------")
       print("--------------------------------------")
-      jar = str(input("Enter the Server Jar you prefer: vanilla , spigot , paper , purpur"))
+      print("Enter the Server Jar you prefer: vanilla , spigot , paper , purpur")
+      jar = str(input("Answer:"))
       if jar in ['vanilla' , 'spigot' , 'paper' , 'purpur']:
           break
       else:
@@ -54,7 +57,8 @@ else:
 
 while True:
   try:
-    players = int(input("How many player you would expect?"))
+    print("How many player you would expect?")
+    players = int(input("Answer:"))
     if players>0:
         break
     else:
@@ -70,7 +74,8 @@ if jar!="vanilla":
 
   while True:
     try:
-      plugins = int(input("How many plugins you would need?"))
+      print("How many plugins you would need?")
+      plugins = int(input("Answer:"))
       if plugins>0:
           break
       else:
@@ -86,7 +91,8 @@ if jar!="vanilla":
 
   while True:
     try:
-      weight = str(input("Are you going to use mostly heavy weight plugins? (yes/no)"))
+      print("Are you going to use mostly heavy weight plugins? (yes/no)")
+      weight = str(input("Answer:"))
       if weight in ['yes' , 'no']:
           break
       else:
