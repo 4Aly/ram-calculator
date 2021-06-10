@@ -111,29 +111,29 @@ def main():
     else:
         ram += 2
 
-    if 10 < players < 30:
+    if 20 < players < 40:
         ram += 1
-    elif 30 <= players < 50:
+    elif 40 <= players < 70:
         ram += 3
-    elif 50 <= players < 80:
+    elif 70 <= players < 100:
         ram += 5
-    elif 80 <= players < 110:
+    elif 100 <= players < 140:
         ram += 6
-    elif 110 <= players < 160:
+    elif 140 <= players < 180:
         ram += 8
-    elif 160 <= players <= 200:
+    elif 180 <= players <= 220:
         ram += 10
-    elif players > 200:
+    elif players > 220:
         ram += 14
 
     if jar != "vanilla":
-        if 20 < plugins < 30:
+        if 30 < plugins < 50:
             ram += 1
-        elif 30 <= plugins < 50:
+        elif 50 <= plugins < 70:
             ram += 2
-        elif 50 <= plugins < 80:
+        elif 70 <= plugins < 90:
             ram += 3
-        elif 80 <= plugins < 110:
+        elif 90 <= plugins < 110:
             ram += 4
         elif 110 <= plugins < 160:
             ram += 5
