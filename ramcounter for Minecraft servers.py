@@ -52,7 +52,7 @@ def main():
 
     while True:
         try:
-            print("How many player you would expect?")
+            print("How many players are you hoping to run with?")
             players = int(input("Answer: "))
             if players > 0:
                 break
@@ -86,7 +86,7 @@ def main():
 
         while True:
             try:
-                print("Are you going to use mostly heavy weight plugins? (yes/no)")
+                print("Are you going to use mostly heavy weight plugins? (yes/no). These could be plugins like fully custom items or world gem, as some examples.")
                 weight = str(input("Answer: ").lower())
                 if weight in ['yes', 'no']:
                     break
@@ -102,7 +102,10 @@ def main():
     print("Calculating...")
 
     if jar in ['vanilla', 'bukkit', 'spigot']:
-        ram += 3
+        if players > 20:
+            ram += 3
+        else:
+            ram += 0
     else:
         ram += 2
 
@@ -148,11 +151,12 @@ def main():
 
     print("Ram has been calculated")
     print("---------------------------------------------------------------------------------------------------")
-    print("Calculated ram is " + str(ram) + " (There is more that you should consider, dont rely on this only)")
+    print(f"Calculated ram is {ram}GB!(There is more that you should consider, dont rely on this only)")
     print("---------------------------------------------------------------------------------------------------")
     print("           THIS IS MADE FOR EXPERIMENTAL PURPOSES AND MAY OR MAY NOT BE ACCURATE")
     print("---------------------------------------------------------------------------------------------------")
-    print("Made By aly#1992")
+    print("Made By aly#1992, view contributors on the github at https://github.com/alyamr2006/ram-calculator .")
+
     
 
 while True:
