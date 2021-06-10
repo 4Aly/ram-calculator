@@ -86,7 +86,7 @@ def main():
 
         while True:
             try:
-                print("Are you going to use mostly heavy weight plugins? (yes/no). These could be plugins like fully custom items or world gem, as some examples.")
+                print("Are you going to use mostly heavy weight plugins? (yes/no). These could be plugins like fully custom items or world gen, as some examples.")
                 weight = str(input("Answer: ").lower())
                 if weight in ['yes', 'no']:
                     break
