@@ -151,7 +151,7 @@ def main():
 
     print("Ram has been calculated")
     print("---------------------------------------------------------------------------------------------------")
-    print(f"Calculated ram is {ram}GB!(There is more that you should consider, dont rely on this only)")
+    print(f"Calculated ram is {ram}GB plus 1 GB of overflow if you are on pterodactyl panel (this is really important and needed)! (There is more that you should consider, dont rely on this only)")
     print("---------------------------------------------------------------------------------------------------")
     print("           THIS IS MADE FOR EXPERIMENTAL PURPOSES AND MAY OR MAY NOT BE ACCURATE")
     print("---------------------------------------------------------------------------------------------------")
