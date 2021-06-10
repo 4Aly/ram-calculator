@@ -4,7 +4,7 @@ print("Hello! This program is supposed to calculate how much RAM would suit your
 while True:
   try:
     print("Enter the minecraft version you prefer: 1.8 , 1.9 , 1.10 , 1.11 , 1.12 , 1.13 , 1.14 , 1.15 , 1.16 , 1.17")
-    version = str(input("Answer:"))
+    version = str(input("Answer: "))
     if version in ["1.8" , '1.9' , '1.10' , '1.11' , '1.12' , '1.13' , '1.14' , '1.15' , '1.16' , '1.17']:
         break
     else:
@@ -24,7 +24,7 @@ elif version in ["1.8" , "1.9" , "1.10" , "1.11" , "1.12"]:
       print("--------THIS IS CASE SENSITIVE--------")
       print("--------------------------------------")
       print("Enter the Server Jar you prefer: vanilla , spigot , paper")
-      jar = str(input("Answer:"))
+      jar = str(input("Answer: "))
       if jar in ['vanilla' , 'spigot' , 'paper']:
           break
       else:
@@ -43,7 +43,7 @@ else:
       print("--------THIS IS CASE SENSITIVE--------")
       print("--------------------------------------")
       print("Enter the Server Jar you prefer: vanilla , spigot , paper , purpur")
-      jar = str(input("Answer:"))
+      jar = str(input("Answer: "))
       if jar in ['vanilla' , 'spigot' , 'paper' , 'purpur']:
           break
       else:
@@ -58,7 +58,7 @@ else:
 while True:
   try:
     print("How many player you would expect?")
-    players = int(input("Answer:"))
+    players = int(input("Answer: "))
     if players>0:
         break
     else:
@@ -75,7 +75,7 @@ if jar!="vanilla":
   while True:
     try:
       print("How many plugins you would need?")
-      plugins = int(input("Answer:"))
+      plugins = int(input("Answer: "))
       if plugins>0:
           break
       else:
@@ -92,7 +92,7 @@ if jar!="vanilla":
   while True:
     try:
       print("Are you going to use mostly heavy weight plugins? (yes/no)")
-      weight = str(input("Answer:"))
+      weight = str(input("Answer: "))
       if weight in ['yes' , 'no']:
           break
       else:
