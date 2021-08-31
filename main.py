@@ -98,16 +98,16 @@ def main():
                 print("--------------------------------------")
 
     if jar in ['vanilla', 'bukkit', 'spigot']:
-        if players > 20:
+        if players >= 20:
             ram += 3
+        elif players >= 10:
+            ram += 1
         else:
-            ram += 0
+            ram += 0.5
     else:
         ram += 2
 
-    if version in list(range(8,13)):
-        ram = ram
-    else:
+    if not version in list(range(8,13)):
         ram += 2
 
     if 20 < players < 40:
