@@ -146,7 +146,8 @@ def main():
             ram += 8
 
     if jar in ["vanilla", "spigot"]:
-        ram += 2
+        if players >= 10:
+            ram += 2
         
 
     print("\033c")
