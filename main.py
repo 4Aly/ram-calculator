@@ -96,7 +96,7 @@ def main():
                 print("      Please enter yes or no")
                 print("--------------------------------------")
     if jar == "forge":
-        weight = "yes"
+        weight = "no"
         while True:
             try:
                 print("How many mods would your server be using?")
@@ -147,7 +147,7 @@ def main():
             plugins = int(round(mods * 1.2))
         if weight == "yes":
             ram += 1
-        if 30 < plugins < 50:
+        if 40 < plugins < 50:
             ram += 1
         elif 50 <= plugins < 70:
             ram += 2
