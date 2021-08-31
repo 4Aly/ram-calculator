@@ -99,7 +99,7 @@ def main():
         while True:
             try:
                 print("How many mods would your server be using?")
-                plugins = int(input("Answer: "))
+                mods = int(input("Answer: "))
                 if mods > 0:
                     break
                 else:
