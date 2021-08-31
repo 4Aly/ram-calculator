@@ -1,68 +1,66 @@
-print("Hello! This program is supposed to calculate how much RAM would suit your needs.")
+print("Minecraft Server RAM Calculator - https://github.com/alyamr2006/ram-calculator")
 def main():
     ram = 0
     jar = "vanilla"
     while True:
         try:
-            print("Enter the minecraft version you prefer: 1.8, 1.9, 1.10, 1.11, 1.12, 1.13, 1.14, 1.15, 1.16, 1.17")
+            print("Please enter the Minecraft Version you wish to run on your server e.g. 1.8.8, 1.17.1: ")
             version = str(input("Answer: "))
-            if version in ["1.8", '1.9', '1.10', '1.11', '1.12', '1.13', '1.14', '1.15', '1.16', '1.17']:
+            if version.split(".")[1] in range(8,17):
                 break
             else:
                 print("--------------------------------------")
-                print("Please enter a valid minecraft version")
+                print("Please enter a valid Minecraft version")
                 print("--------------------------------------")
         except ValueError:
             print("--------------------------------------")
-            print("Please enter a valid minecraft version")
+            print("Please enter a valid Minecraft version")
             print("--------------------------------------")
-    if version in ["1.17"]:
-        print("Only vanilla jar is available so let's move on to the next question")
-    elif version in ["1.8", "1.9", "1.10", "1.11", "1.12"]:
+    if version.split(".")[1] in range(8,12):
         while True:
             try:
-                print("Enter the Server Jar you prefer: vanilla, spigot, paper")
+                print("Enter the JAR type you prefer: vanilla, spigot, paper")
                 jar = str(input("Answer: ").lower())
                 if jar in ['vanilla', 'spigot', 'paper']:
                     break
                 else:
                     print("--------------------------------------")
-                    print("  Please enter a valid Server Jar")
+                    print("  Please enter a valid JAR type")
                     print("--------------------------------------")
             except ValueError:
                 print("--------------------------------------")
-                print("  Please enter a valid Server Jar")
+                print("  Please enter a valid JAR type")
                 print("--------------------------------------")
 
     else:
         while True:
             try:
-                print("Enter the Server Jar you prefer: vanilla, spigot, paper, purpur")
+                print("Enter the JAR type you prefer: vanilla, spigot, paper, purpur")
                 jar = str(input("Answer: ").lower())
                 if jar in ['vanilla', 'spigot', 'paper', 'purpur']:
                     break
                 else:
                     print("--------------------------------------")
-                    print("  Please enter a valid Server Jar")
+                    print("  Please enter a valid JAR type")
                     print("--------------------------------------")
             except ValueError:
                 print("--------------------------------------")
-                print("  Please enter a valid Server Jar")
+                print("  Please enter a valid JAR type")
                 print("--------------------------------------")
 
     while True:
         try:
-            print("How many players are you hoping to run with?")
+            print("How many players at most would be on the server at once?")
             players = int(input("Answer: "))
             if players > 0:
                 break
             else:
                 print("--------------------------------------")
-                print("   Please enter a positive number")
+                print("   Please enter an integer")
                 print("--------------------------------------")
         except ValueError:
             print("--------------------------------------")
-            print("      Please enter a number")
+            print("      Please enter an integer")
             print("--------------------------------------")
 
     if jar != "vanilla":
@@ -75,11 +73,11 @@ def main():
                     break
                 else:
                     print("--------------------------------------")
-                    print("   Please enter a positive number")
+                    print("   Please enter an integer")
                     print("--------------------------------------")
             except ValueError:
                 print("--------------------------------------")
-                print("      Please enter a number")
+                print("      Please enter an integer")
                 print("--------------------------------------")
 
     if jar != "vanilla":
@@ -99,8 +97,6 @@ def main():
                 print("      Please enter yes or no")
                 print("--------------------------------------")
 
-    print("Calculating...")
-
     if jar in ['vanilla', 'bukkit', 'spigot']:
         if players > 20:
             ram += 3
@@ -109,7 +105,7 @@ def main():
     else:
         ram += 2
 
-    if version in ["1.8", '1.9', '1.10', '1.11', '1.12']:
+    if version.split(".")[1] in range(8,12):
         ram = ram
     else:
         ram += 2
@@ -149,13 +145,10 @@ def main():
         if weight == "yes":
             ram += 1
 
-    print("Ram has been calculated")
+    print("\033c")
     print("---------------------------------------------------------------------------------------------------")
-    print(f"Calculated ram is {ram}GB plus 1 GB of overflow if you are on pterodactyl panel (this is really important and needed)! (There is more that you should consider, dont rely on this only)")
+    print(f"Approximately, your server will need {ram}GB allocated. Please note this tool is not 100% accurate.")
     print("---------------------------------------------------------------------------------------------------")
-    print("           THIS IS MADE FOR EXPERIMENTAL PURPOSES AND MAY OR MAY NOT BE ACCURATE")
-    print("---------------------------------------------------------------------------------------------------")
-    print("Made By aly#1992, view contributors on the github at https://github.com/alyamr2006/ram-calculator .")
 
     
 
@@ -163,4 +156,7 @@ while True:
     main()
     repeat = str(input("Restart? (yes/no)").lower())
     if repeat != 'yes':
+        print("---------------------------------------------------------------------------------------------------")
+        print("Thanks for using this tool, made by aly#1992\nYou can view the other generous contributors here:\nhttps://github.com/alyamr2006/ram-calculator")
+        print("---------------------------------------------------------------------------------------------------")
         break
