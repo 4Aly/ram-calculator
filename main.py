@@ -18,10 +18,10 @@ def main():
             print("--------------------------------------")
             print("Please enter a valid Minecraft version")
             print("--------------------------------------")
-    if version in list(range(8,13)):
+    if version in list(range(8,14)):
         while True:
             try:
-                print("Enter the JAR type you prefer: vanilla, spigot, paper, forge")
+                print("What JAR type will your server be running? vanilla, spigot, paper, forge")
                 jar = str(input("Answer: ").lower())
                 if jar in ['vanilla', 'spigot', 'paper', 'forge']:
                     break
@@ -37,7 +37,7 @@ def main():
     else:
         while True:
             try:
-                print("Enter the JAR type you prefer: vanilla, spigot, paper, purpur, forge")
+                print("What JAR type will your server be running? vanilla, spigot, paper, purpur, forge")
                 jar = str(input("Answer: ").lower())
                 if jar in ['vanilla', 'spigot', 'paper', 'purpur', 'forge']:
                     break
