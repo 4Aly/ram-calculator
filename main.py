@@ -6,7 +6,7 @@ def main():
         try:
             print("Please enter the Minecraft Version you wish to run on your server e.g. 1.8.8, 1.17.1: ")
             version = str(input("Answer: "))
-            if version.split(".")[1] in range(8,17):
+            if version.split(".")[1] in list(range(8,18)):
                 break
             else:
                 print("--------------------------------------")
@@ -16,7 +16,7 @@ def main():
             print("--------------------------------------")
             print("Please enter a valid Minecraft version")
             print("--------------------------------------")
-    if version.split(".")[1] in range(8,12):
+    if version.split(".")[1] in list(range(8,13)):
         while True:
             try:
                 print("Enter the JAR type you prefer: vanilla, spigot, paper")
@@ -105,7 +105,7 @@ def main():
     else:
         ram += 2
 
-    if version.split(".")[1] in range(8,12):
+    if version.split(".")[1] in list(range(8,13)):
         ram = ram
     else:
         ram += 2
