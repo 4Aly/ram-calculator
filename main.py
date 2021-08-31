@@ -101,9 +101,9 @@ def main():
         if players >= 20:
             ram += 3
         elif players >= 10:
-            ram += 1
+            ram += 2
         else:
-            ram += 0.5
+            ram += 1
     else:
         ram += 2
 
