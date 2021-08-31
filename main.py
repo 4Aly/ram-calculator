@@ -83,7 +83,7 @@ def main():
 
         while True:
             try:
-                print("Are you going to be using any resource intensive plugins on your server?")
+                print("Are you going to be using any resource intensive plugins on your server? (yes/no)")
                 weight = str(input("Answer: ").lower())
                 if weight in ['yes', 'no']:
                     break
