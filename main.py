@@ -83,7 +83,7 @@ def main():
 
         while True:
             try:
-                print("Are you going to use mostly heavy weight plugins? (yes/no). These could be plugins like fully custom items or world gen, as some examples.")
+                print("Are you going to be using any resource intensive plugins on your server?")
                 weight = str(input("Answer: ").lower())
                 if weight in ['yes', 'no']:
                     break
@@ -96,6 +96,7 @@ def main():
                 print("      Please enter yes or no")
                 print("--------------------------------------")
     if jar == "forge":
+        weight = yes
         while True:
             try:
                 print("How many mods would your server be using?")
