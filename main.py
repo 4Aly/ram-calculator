@@ -149,6 +149,7 @@ def main():
     print("---------------------------------------------------------------------------------------------------")
     print(f"Approximately, your server will need {ram}GB allocated. Please note this tool is not 100% accurate.")
     print("---------------------------------------------------------------------------------------------------")
+    break
 
     
 
