@@ -100,9 +100,9 @@ def main():
                 print("--------------------------------------")
 
     if jar in ['vanilla', 'bukkit', 'spigot']:
-        if players >= 20:
+        if players >= 10:
             ram += 3
-        elif players >= 10:
+        elif players >= 5:
             ram += 2
         else:
             ram += 1
@@ -144,11 +144,6 @@ def main():
             ram += 6
         elif plugins > 200:
             ram += 8
-
-    if jar in ["vanilla", "spigot"]:
-        if players >= 10:
-            ram += 2
-        
 
     print("\033c")
     print("---------------------------------------------------------------------------------------------------")
