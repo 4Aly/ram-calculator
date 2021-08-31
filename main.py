@@ -96,7 +96,7 @@ def main():
                 print("      Please enter yes or no")
                 print("--------------------------------------")
     if jar == "forge":
-        weight = yes
+        weight = "yes"
         while True:
             try:
                 print("How many mods would your server be using?")
