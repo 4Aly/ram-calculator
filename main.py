@@ -21,9 +21,9 @@ def main():
     if version in list(range(8,13)):
         while True:
             try:
-                print("Enter the JAR type you prefer: vanilla, spigot, paper")
+                print("Enter the JAR type you prefer: vanilla, spigot, paper, forge")
                 jar = str(input("Answer: ").lower())
-                if jar in ['vanilla', 'spigot', 'paper']:
+                if jar in ['vanilla', 'spigot', 'paper', 'forge']:
                     break
                 else:
                     print("--------------------------------------")
@@ -37,9 +37,9 @@ def main():
     else:
         while True:
             try:
-                print("Enter the JAR type you prefer: vanilla, spigot, paper, purpur")
+                print("Enter the JAR type you prefer: vanilla, spigot, paper, purpur, forge")
                 jar = str(input("Answer: ").lower())
-                if jar in ['vanilla', 'spigot', 'paper', 'purpur']:
+                if jar in ['vanilla', 'spigot', 'paper', 'purpur', 'forge']:
                     break
                 else:
                     print("--------------------------------------")
@@ -52,7 +52,7 @@ def main():
 
     while True:
         try:
-            print("How many players at most would be on the server at once?")
+            print("How many players maximum would be on the server at once?")
             players = int(input("Answer: "))
             if players > 0:
                 break
@@ -65,11 +65,10 @@ def main():
             print("      Please enter an integer")
             print("--------------------------------------")
 
-    if jar != "vanilla":
-
+    if not jar in ["vanilla", "forge"]:
         while True:
             try:
-                print("How many plugins you would need?")
+                print("How many plugins would your server be using?")
                 plugins = int(input("Answer: "))
                 if plugins > 0:
                     break
@@ -81,8 +80,6 @@ def main():
                 print("--------------------------------------")
                 print("      Please enter an integer")
                 print("--------------------------------------")
-
-    if jar != "vanilla":
 
         while True:
             try:
@@ -98,8 +95,23 @@ def main():
                 print("--------------------------------------")
                 print("      Please enter yes or no")
                 print("--------------------------------------")
+    if jar == "forge":
+        while True:
+            try:
+                print("How many mods would your server be using?")
+                plugins = int(input("Answer: "))
+                if mods > 0:
+                    break
+                else:
+                    print("--------------------------------------")
+                    print("   Please enter an integer")
+                    print("--------------------------------------")
+            except ValueError:
+                print("--------------------------------------")
+                print("      Please enter an integer")
+                print("--------------------------------------")
 
-    if jar in ['vanilla', 'bukkit', 'spigot']:
+    if jar in ['vanilla', 'spigot', 'forge']:
         if players >= 10:
             ram += 3
         elif players >= 5:
@@ -112,8 +124,10 @@ def main():
     if not version in list(range(8,13)):
         ram += 3
 
-    if players < 40:
+    if players < 20:
         ram += 1
+    elif 20 <= players < 40:
+        ram += 2
     elif 40 <= players < 70:
         ram += 3
     elif 70 <= players < 100:
@@ -128,6 +142,8 @@ def main():
         ram += 14
 
     if jar != "vanilla":
+        if jar == "forge":
+            plugins = int(round(mods * 1.2))
         if weight == "yes":
             ram += 1
         if 30 < plugins < 50:
