@@ -5,7 +5,7 @@ def main():
     while True:
         try:
             print("Please enter the Minecraft Version you wish to run on your server e.g. 1.8.8, 1.17.1: ")
-            version = str(input("Answer: ")).split(".")[1]
+            version = int(str(input("Answer: ")).split(".")[1])
             if version in list(range(8,18)):
                 break
             else:
