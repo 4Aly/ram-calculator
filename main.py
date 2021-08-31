@@ -112,7 +112,7 @@ def main():
     if not version in list(range(8,13)):
         ram += 3
 
-    if 20 < players < 40:
+    if players < 40:
         ram += 1
     elif 40 <= players < 70:
         ram += 3
@@ -128,6 +128,8 @@ def main():
         ram += 14
 
     if jar != "vanilla":
+        if weight == "yes":
+            ram += 1
         if 30 < plugins < 50:
             ram += 1
         elif 50 <= plugins < 70:
@@ -143,9 +145,9 @@ def main():
         elif plugins > 200:
             ram += 8
 
-    if jar != "vanilla":
-        if weight == "yes":
-            ram += 1
+    if jar in ["vanilla", "spigot"]:
+        ram += 2
+        
 
     print("\033c")
     print("---------------------------------------------------------------------------------------------------")
