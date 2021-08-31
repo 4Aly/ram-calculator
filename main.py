@@ -112,13 +112,10 @@ def main():
                 print("      Please enter an integer")
                 print("--------------------------------------")
 
-    if jar in ['vanilla', 'spigot', 'forge']:
-        if players >= 10:
-            ram += 3
-        elif players >= 5:
+    if jar in ['vanilla', 'spigot']:
+        if players >= 20:
             ram += 2
-        else:
-            ram += 1
+            
     else:
         ram += 2
 
@@ -144,7 +141,7 @@ def main():
 
     if jar != "vanilla":
         if jar == "forge":
-            plugins = int(round(mods * 1.2))
+            plugins = mods
         if weight == "yes":
             ram += 1
         if 40 < plugins < 50:
