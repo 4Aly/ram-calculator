@@ -4,7 +4,7 @@ def main():
     jar = "vanilla"
     while True:
         try:
-            print("Please enter the Minecraft Version you wish to run on your server e.g. 1.8.8, 1.17.1: ")
+            print("What Minecraft Version would your server be running? E.g. 1.8.8, 1.17.1")
             version = int(str(input("Answer: ")).split(".")[1])
             if version in list(range(8,18)):
                 break
@@ -108,7 +108,7 @@ def main():
         ram += 2
 
     if not version in list(range(8,13)):
-        ram += 2
+        ram += 3
 
     if 20 < players < 40:
         ram += 1
@@ -154,7 +154,7 @@ def main():
 
 while True:
     main()
-    repeat = str(input("Restart? (yes/no)").lower())
+    repeat = str(input("Restart? (yes/no) ").lower())
     if repeat != 'yes':
         print("---------------------------------------------------------------------------------------------------")
         print("Thanks for using this tool, made by aly#1992\nYou can view the other generous contributors here:\nhttps://github.com/alyamr2006/ram-calculator")
