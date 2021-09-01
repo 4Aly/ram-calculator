@@ -1,6 +1,11 @@
-print("---------------------------------------------------------------------------------------------------")
-print("Minecraft Server RAM Calculator - https://github.com/alyamr2006/ram-calculator")
-print("---------------------------------------------------------------------------------------------------")
+def printLines(context):
+    print(f"--------------------------------------\n{context}\n--------------------------------------")
+    
+def printLargeLines(context):
+    print(f"---------------------------------------------------------------------------------------------------\n{context}\n---------------------------------------------------------------------------------------------------")
+
+printLargeLines("Minecraft Server RAM Calculator - https://github.com/alyamr2006/ram-calculator")
+    
 def main():
     ram = 0
     jar = "vanilla"
@@ -11,13 +16,9 @@ def main():
             if version in list(range(8,18)):
                 break
             else:
-                print("--------------------------------------")
-                print("Please enter a valid Minecraft version")
-                print("--------------------------------------")
+                printLines("Please enter a valid Minecraft version")
         except ValueError:
-            print("--------------------------------------")
-            print("Please enter a valid Minecraft version")
-            print("--------------------------------------")
+            printLines("Please enter a valid Minecraft version")
     if version in list(range(8,14)):
         while True:
             try:
@@ -26,13 +27,9 @@ def main():
                 if jar in ['vanilla', 'spigot', 'paper', 'forge']:
                     break
                 else:
-                    print("--------------------------------------")
-                    print("  Please enter a valid JAR type")
-                    print("--------------------------------------")
+                    printLines("Please enter a valid JAR type")
             except ValueError:
-                print("--------------------------------------")
-                print("  Please enter a valid JAR type")
-                print("--------------------------------------")
+                printLines("Please enter a valid JAR type")
 
     else:
         while True:
@@ -42,13 +39,9 @@ def main():
                 if jar in ['vanilla', 'spigot', 'paper', 'purpur', 'forge']:
                     break
                 else:
-                    print("--------------------------------------")
-                    print("  Please enter a valid JAR type")
-                    print("--------------------------------------")
+                    printLines("Please enter a valid JAR type")
             except ValueError:
-                print("--------------------------------------")
-                print("  Please enter a valid JAR type")
-                print("--------------------------------------")
+                printLines("Please enter a valid JAR type")
 
     while True:
         try:
@@ -57,13 +50,9 @@ def main():
             if players > 0:
                 break
             else:
-                print("--------------------------------------")
-                print("   Please enter an integer")
-                print("--------------------------------------")
+                printLines("Please enter an integer")
         except ValueError:
-            print("--------------------------------------")
-            print("      Please enter an integer")
-            print("--------------------------------------")
+            printLines("Please enter an integer")
 
     if not jar in ["vanilla", "forge"]:
         while True:
@@ -73,13 +62,9 @@ def main():
                 if plugins > 0:
                     break
                 else:
-                    print("--------------------------------------")
-                    print("   Please enter an integer")
-                    print("--------------------------------------")
+                    printLines("Please enter an integer")
             except ValueError:
-                print("--------------------------------------")
-                print("      Please enter an integer")
-                print("--------------------------------------")
+                printLines("Please enter an integer")
 
         while True:
             try:
@@ -88,13 +73,9 @@ def main():
                 if weight in ['yes', 'no']:
                     break
                 else:
-                    print("--------------------------------------")
-                    print("      Please enter yes or no")
-                    print("--------------------------------------")
+                    printLines("Please enter yes or no")
             except ValueError:
-                print("--------------------------------------")
-                print("      Please enter yes or no")
-                print("--------------------------------------")
+                printLines("Please enter yes or no")
     if jar == "forge":
         weight = "no"
         while True:
@@ -104,13 +85,9 @@ def main():
                 if mods > 0:
                     break
                 else:
-                    print("--------------------------------------")
-                    print("   Please enter an integer")
-                    print("--------------------------------------")
+                    printLines("Please enter an integer")
             except ValueError:
-                print("--------------------------------------")
-                print("      Please enter an integer")
-                print("--------------------------------------")
+                printLines("Please enter an integer")
 
     if jar in ['vanilla', 'spigot']:
         if players >= 20:
@@ -160,9 +137,7 @@ def main():
             ram += 8
 
     print("\033c")
-    print("---------------------------------------------------------------------------------------------------")
-    print(f"Approximately, your server will need {ram}GB allocated. Please note this tool is not 100% accurate.")
-    print("---------------------------------------------------------------------------------------------------")
+    printLargeLines(f"Approximately, your server will need {ram}GB allocated. Please note this tool is not 100% accurate.")
 
     
 
@@ -170,7 +145,5 @@ while True:
     main()
     repeat = str(input("Restart? (yes/no) ").lower())
     if repeat != 'yes':
-        print("---------------------------------------------------------------------------------------------------")
-        print("Thanks for using this tool, made by aly#1992\nYou can view the other generous contributors here:\nhttps://github.com/alyamr2006/ram-calculator")
-        print("---------------------------------------------------------------------------------------------------")
+        printLargeLines("Thanks for using this tool, made by aly#1992\nYou can view the other generous contributors here:\nhttps://github.com/alyamr2006/ram-calculator")
         break
