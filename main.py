@@ -4,7 +4,7 @@ def printLines(context):
 def printLargeLines(context):
     print(f"---------------------------------------------------------------------------------------------------\n{context}\n---------------------------------------------------------------------------------------------------")
 
-printLargeLines("Minecraft Server RAM Calculator - https://github.com/alyamr2006/ram-calculator")
+printLargeLines("Minecraft Server RAM Calculator - https://github.com/UrSoMeanLOL/ram-calculator")
     
 def main():
     ram = 0
@@ -145,5 +145,5 @@ while True:
     main()
     repeat = str(input("Restart? (yes/no) ").lower())
     if repeat != 'yes':
-        printLargeLines("Thanks for using this tool, made by aly#1992\nYou can view the other generous contributors here:\nhttps://github.com/alyamr2006/ram-calculator")
+        printLargeLines("Thanks for using this tool, made by Mean#1139\nYou can view the other generous contributors here:\nhttps://github.com/UrSoMeanLOL/ram-calculator")
         break
